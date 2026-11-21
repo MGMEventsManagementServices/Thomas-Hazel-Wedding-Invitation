@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thomas &amp; Hazel | We Still Do</title>
+<meta property="og:title" content="Thomas &amp; Hazel | We Still Do">
+<meta property="og:description" content="Join us as we renew our wedding vows — December 28, 2026">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mgmeventsmanagementservices.github.io/Thomas-Hazel-Wedding-Invitation/">
+<meta property="og:site_name" content="Thomas &amp; Hazel | We Still Do">
+<meta property="og:image" content="https://mgmeventsmanagementservices.github.io/Thomas-Hazel-Wedding-Invitation/thumbnail.png">
+<meta property="og:image:secure_url" content="https://mgmeventsmanagementservices.github.io/Thomas-Hazel-Wedding-Invitation/thumbnail.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Thomas &amp; Hazel — We Still Do, vow renewal invitation">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thomas &amp; Hazel | We Still Do">
+<meta name="twitter:description" content="Join us as we renew our wedding vows — December 28, 2026">
+<meta name="twitter:image" content="https://mgmeventsmanagementservices.github.io/Thomas-Hazel-Wedding-Invitation/thumbnail.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Italianno&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script>
+if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+window.scrollTo(0, 0);
+</script>
+</head>
+<body>
+
+<!-- ============ SVG SPRITE / CREST ============ -->
+<svg class="sprite" aria-hidden="true">
+<symbol id="crest" viewBox="0 0 200 200">
+<circle class="crest-ring" cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="1.5"/>
+<circle class="crest-ring-inner" cx="100" cy="100" r="78" fill="none" stroke="currentColor" stroke-width="1"/>
+<image class="crest-image" href="assets/crest.png" x="38" y="38" width="124" height="124" preserveAspectRatio="xMidYMid meet"/>
+</symbol>
+</svg>
+
+<svg class="sprite" aria-hidden="true">
+<symbol id="icon" viewBox="0 0 200 200">
+<circle class="crest-ring" cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="1.5"/>
+<circle class="crest-ring-inner" cx="100" cy="100" r="78" fill="none" stroke="currentColor" stroke-width="1"/>
+<image class="crest-image" href="assets/cpicon.png" x="38" y="38" width="124" height="124" preserveAspectRatio="xMidYMid meet"/>
+</symbol>
+</svg>
+
+<!-- ============ PRELOADER ============ -->
+<div id="preloader">
+<svg class="preloader-crest" viewBox="0 0 200 200" aria-hidden="true">
+<circle class="crest-ring" cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="1.5"/>
+<circle class="crest-ring-inner" cx="100" cy="100" r="78" fill="none" stroke="currentColor" stroke-width="1"/>
+<image class="crest-image draw-text" href="assets/crest.png" x="38" y="38" width="124" height="124" preserveAspectRatio="xMidYMid meet"/>
+</svg>
+<p class="preloader-label">Thomas &amp; Hazel</p>
+<span class="preloader-sub">We Still Do</span>
+</div>
+
+<!-- ============ AMBIENT LAYERS ============ -->
+<div class="ambient" id="ambientLayer" aria-hidden="true">
+<div class="ambient-glow ambient-glow--a"></div>
+<div class="ambient-glow ambient-glow--b"></div>
+<div class="petals" id="petals"></div>
+</div>
+
+<!-- ============ MUSIC ============ -->
+<audio id="bgMusic" loop preload="auto">
+<source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn" class="music-btn" aria-label="Toggle music" disabled>
+<svg class="music-icon music-icon--play" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M8 5v14l11-7z"/>
+</svg>
+<svg class="music-icon music-icon--pause" viewBox="0 0 24 24" aria-hidden="true">
+    <rect x="6" y="5" width="4" height="14" rx="1"/>
+    <rect x="14" y="5" width="4" height="14" rx="1"/>
+</svg>
+</button>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="progress-rail" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- ============ ENVELOPE GATE ============ -->
+<section id="gate">
+<div class="gate-frame">
+<div class="envelope" id="envelope">
+    <div class="envelope__glow"></div>
+    <div class="envelope__shadow"></div>
+    <div class="envelope__back"><div class="envelope__pattern"></div></div>
+
+    <div class="envelope__letter">
+    <p class="letter-eyebrow">An Invitation Awaits</p>
+    <h2 class="letter-title">Thomas &amp; Hazel</h2>
+    <p class="letter-text">invite you to join them<br>as they renew their wedding vows</p>
+    <p class="letter-script">We Still Do</p>
+    <div class="letter__flourish"></div>
+    </div>
+
+    <svg class="envelope__pocket" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+        <linearGradient id="gBase" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8f2742"/><stop offset=".5" stop-color="#651830"/><stop offset="1" stop-color="#430d1d"/></linearGradient>
+        <linearGradient id="gLeft" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a63350"/><stop offset="1" stop-color="#6b1a31"/></linearGradient>
+        <linearGradient id="gRight" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#4a0f1f"/><stop offset="1" stop-color="#6f1b33"/></linearGradient>
+        <linearGradient id="gBottom" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#8a2440"/><stop offset=".6" stop-color="#5f1629"/><stop offset="1" stop-color="#4c1121"/></linearGradient>
+    </defs>
+    <polygon points="0,0 50,60 100,0 100,100 0,100" fill="url(#gBase)"/>
+    <polygon points="0,0 50,58 0,100" fill="url(#gLeft)"/>
+    <polygon points="100,0 50,58 100,100" fill="url(#gRight)"/>
+    <polygon points="0,100 50,56 100,100" fill="url(#gBottom)"/>
+    <polyline points="0,100 50,56 100,100" fill="none" stroke="#1a0309" stroke-opacity=".45" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+    <polyline points="0,0 50,58 100,0" fill="none" stroke="#1a0309" stroke-opacity=".35" stroke-width="1" vector-effect="non-scaling-stroke"/>
+    <polyline points="0,100 50,55 100,100" fill="none" stroke="#ffd9a0" stroke-opacity=".16" stroke-width="1" vector-effect="non-scaling-stroke" transform="translate(0,-.8)"/>
+    <polygon points="0,0 50,60 100,0 100,100 0,100" fill="none" stroke="#d9b45e" stroke-opacity=".55" stroke-width="1" vector-effect="non-scaling-stroke"/>
+    </svg>
+    <div class="envelope__grain envelope__grain--pocket"></div>
+
+    <div class="envelope__details" aria-hidden="true">
+    <span class="envelope__corner envelope__corner--bl"></span>
+    <span class="envelope__corner envelope__corner--br"></span>
+    <span class="envelope__ornament">&#10022;</span>
+    <div class="envelope__stamp"><b>17</b><span>YEARS</span></div>
+    </div>
+
+    <div class="envelope__flap">
+    <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+        <linearGradient id="gFlap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a83450"/><stop offset=".55" stop-color="#7a1f36"/><stop offset="1" stop-color="#521225"/></linearGradient>
+        <linearGradient id="gFlapLight" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".28"/></linearGradient>
+        </defs>
+        <polygon points="0,0 100,0 50,100" fill="url(#gFlap)"/>
+        <polygon points="0,0 100,0 50,100" fill="url(#gFlapLight)"/>
+        <polygon points="0,0 100,0 50,100" fill="none" stroke="#d9b45e" stroke-opacity=".6" stroke-width="1" vector-effect="non-scaling-stroke"/>
+        <polyline points="6,0 50,86 94,0" fill="none" stroke="#f0d58a" stroke-opacity=".22" stroke-width="1" vector-effect="non-scaling-stroke"/>
+    </svg>
+    <div class="envelope__grain envelope__grain--flap"></div>
+    </div>
+
+    <div class="seal" id="seal">
+    <span class="seal__ring"></span>
+    <div class="seal__face">
+        <img src="assets/crest.png" alt="Thomas and Hazel crest">
+        <span class="seal__shine"></span>
+    </div>
+    </div>
+
+    <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+    <div class="ambient-sparkles" id="ambientSparkles" aria-hidden="true"></div>
+</div>
+
+<p class="gate-hint">Tap the envelope to open your invitation</p>
+</div>
+</section>
+
+
+
+<main id="main">
+
+<nav class="side-nav" aria-label="Section navigation">
+<a href="#hero" data-label="Welcome"></a>
+<a href="#story" data-label="Our Story"></a>
+<a href="#about" data-label="The Couple"></a>
+<a href="#celebrations" data-label="Entourage"></a>
+<a href="#gallery" data-label="Gallery"></a>
+<a href="#venue" data-label="Venue"></a>
+<a href="#timeline" data-label="Timeline"></a>
+<a href="#dresscode" data-label="Dress Code"></a>
+<a href="#giftguide" data-label="Gift Guide"></a>
+<a href="#faq" data-label="FAQ"></a>
+<a href="#rsvp" data-label="RSVP"></a>
+<a href="#contact" data-label="Contact"></a>
+</nav>
+
+<section id="hero" class="hero">
+<div class="hero__bg"></div>
+<div class="hero__overlay"></div>
+<svg class="hero__crest" viewBox="0 0 200 200" aria-hidden="true"><use href="#crest"/></svg>
+<div class="hero__content">
+    <p class="reveal eyebrow">In honor of celebrating our seventeenth year of marriage</p>
+    <h1 class="reveal reveal--scale hero__name">Thomas &amp; Hazel</h1>
+    <p class="reveal hero__tagline"><span class="script">We Still Do</span></p>
+    <p class="reveal eyebrow">Invite you to join us and our daughter as we renew our wedding vows</p>
+    <div class="reveal hero__meta">
+    <span>Monday</span><i class="dot"></i><span>December 28, 2026</span><i class="dot"></i><span>2:00 PM</span>
+    </div>
+    <div class="reveal countdown" id="countdown">
+    <div class="countdown__cell"><span class="countdown__num" data-unit="days">00</span><span class="countdown__label">Days</span></div>
+    <div class="countdown__cell"><span class="countdown__num" data-unit="hours">00</span><span class="countdown__label">Hours</span></div>
+    <div class="countdown__cell"><span class="countdown__num" data-unit="mins">00</span><span class="countdown__label">Minutes</span></div>
+    <div class="countdown__cell"><span class="countdown__num" data-unit="secs">00</span><span class="countdown__label">Seconds</span></div>
+    </div>
+    <p class="reveal countdown__married" id="countdownMarried" hidden>We still do! &#127881;</p>
+</div>
+</section>
+
+<!-- OUR STORY -->
+<section class="section" id="story">
+<div class="section__inner section__inner--narrow">
+<p class="kicker reveal">Our Story</p>
+<h2 class="reveal heading">A Love That Always Finds Its Way Home</h2>
+<div class="divider reveal"><span></span><svg aria-hidden="true" viewBox="0 0 200 200"><use href="#icon"></use></svg><span></span></div>
+<div class="story-scroll reveal reveal--scale">
+<h4>How It Began</h4>
+<p>Some love stories begin with a chance meeting. Ours began with someone who believed in us before we ever believed in ourselves.</p>
+<p>At the time, Thomas's father, Brian, was my boss. He knew me well, and he often spoke about his eldest son. Deep in his heart, he hoped we would meet, convinced that we might be the right match for each other.</p>
+<p>When I first met Thomas, I noticed how shy he was. He wasn't the loudest person in the room, but there was something quietly captivating about him. He had a warm smile, kind eyes, and carried himself with a maturity well beyond his years. More than anything, I was drawn to his kindness, sincerity, and gentle nature.</p>
+<p>In the beginning, we agreed to give our relationship a chance because we both wanted to make Brian happy. Neither of us knew that what started as a simple introduction would become the greatest love story of our lives.</p>
+<p>As the days turned into weeks, we found ourselves talking for hours. Late-night conversations became our favourite part of the day as we shared our dreams, fears, ambitions, and hopes for the future. Little by little, two strangers became best friends.</p>
+<p>Without even realising it, we had become home to one another.</p>
+<p>Before long, I discovered that no moment of happiness felt complete unless I could share it with Thomas. He had become the most important person in my life, and I couldn't imagine my future without him.</p>
+<h4>Tested by Distance</h4>
+<p>Like every great love story, ours was tested.</p>
+<p>For three long years we lived apart, separated by distance but never by heart. Those years were filled with longing, uncertainty, and countless goodbyes. We missed birthdays, celebrations, and ordinary moments that most couples take for granted. There were lonely nights, difficult days, and moments when all we wanted was to be together.</p>
+<p>Yet those years taught us something priceless.</p>
+<p>We learned that love isn't measured by how often you're together, but by how faithfully you continue choosing each other when being together isn't possible.</p>
+<p>Every phone call, every message, every visit, and every goodbye strengthened the foundation of our relationship. Instead of pulling us apart, the distance brought us closer.</p>
+<p>When we decided to marry, it wasn't because life would be easy. It was because we had already weathered life's storms and discovered that every challenge only made our love stronger.</p>
+<h4>Building Our Life Together</h4>
+<p>When I moved to Australia, we finally began building our life together as husband and wife.</p>
+<p>Life wasn't always perfect. Thomas's work often demanded long hours, but he always found ways to make our time together special. Whether it was a beautiful dinner, a weekend away, or simply exploring Sydney together, he made ordinary moments feel extraordinary. Those memories became treasures that still make us smile today.</p>
+<p>Eight months later, we moved interstate to Adelaide, South Australia, ready to begin another chapter of our lives.</p>
+<p>Not long after, we faced one of the hardest seasons of our marriage.</p>
+<p>Thomas was deployed to Afghanistan.</p>
+<p>For nine months I lived with fear, uncertainty, and constant prayer. Every day I waited for news, hoping and believing that he would return home safely. It was one of the greatest sacrifices we have ever made, and although those months were incredibly difficult, they changed us forever.</p>
+<p>When he returned home, we appreciated each other in ways we never had before. We realised that every ordinary day together was a gift.</p>
+<p>From there, our dreams slowly became reality.</p>
+<p>One of our proudest achievements was building our home. Together we chose every detail—the design, the colours, the finishes, and the little touches that reflected who we were as a couple. It became so much more than bricks and mortar. It became the place where our dreams lived, where laughter echoed through the rooms, and where our family would grow.</p>
+<p>Along the way we celebrated many other milestones. We bought our cars together, including our beloved first Jeep that still brings back wonderful memories whenever we think about it.</p>
+<h4>Our Miracle</h4>
+<p>Then came one of the greatest blessings God could ever have given us.</p>
+<p>Our IVF journey.</p>
+<p>It wasn't an easy path, but through faith, hope, and God's grace, we welcomed our beautiful daughter, Isabella, into our lives. The day she was born, our hearts expanded in ways we never thought possible. She became the greatest reminder that miracles often come after the hardest journeys.</p>
+<p>Our marriage has continued to experience seasons of togetherness and seasons of distance.</p>
+<p>Because of Thomas's work, long-distance has remained part of our story. Our love has often been written in quiet moments—the tears as the garage door closes behind his car, the hugs that last just a little longer at airport terminals, the lonely evenings, and the overwhelming joy of finally welcoming each other home again.</p>
+<p>Every goodbye has hurt.</p>
+<p>But every goodbye has also carried the promise that we would find our way back to each other.</p>
+<h4>Adventures Together</h4>
+<p>Whenever life has allowed, we've made it a priority to create memories together. We've escaped to beautiful hotels, explored new places around Australia, and travelled overseas, reminding ourselves that time together is life's greatest luxury.</p>
+<p>Among all our adventures, one journey will always hold a special place in our hearts.</p>
+<p>Italy.</p>
+<p>We floated through Venice on a romantic gondola, tossed our wishes into the Trevi Fountain, wandered hand in hand through ancient streets, and experienced the incredible privilege of attending the final Mass celebrated by Pope Benedict XVI at St. Peter's Basilica. Those moments became part of the beautiful collection of memories that define our marriage.</p>
+<h4>Renewing Our Vows</h4>
+<p>Today, after seventeen years together, we stand here to renew the vows we made all those years ago.</p>
+<p>Not because our promises have faded, but because they have endured.</p>
+<p>We renew them to celebrate the love that has carried us through every challenge, every season, every goodbye, every homecoming, every victory, and every unexpected blessing.</p>
+<p>Our journey has taught us that real love isn't found only in grand romantic gestures.</p>
+<p>It's found in patience when life is difficult.</p>
+<p>In faith when the future is uncertain.</p>
+<p>In forgiveness when we make mistakes.</p>
+<p>In sacrifice when one gives more than the other.</p>
+<p>In laughter during ordinary days.</p>
+<p>And most importantly, in the daily decision to keep choosing each other, over and over again.</p>
+<h4>Looking Forward</h4>
+<p>As we look toward the future, we dream of more adventures, more travels, more sunsets, more laughter, and more time together. We want to keep creating memories, strengthening our marriage, and embracing every opportunity life gives us.</p>
+<p>One day, when we're old and sitting together in a nursing home, I hope we'll look through our photographs—the holidays, the birthdays, the travels, the family celebrations, and the ordinary everyday moments—and smile.</p>
+<p>Not because our life was perfect.</p>
+<p>But because we lived it together.</p>
+<p>Our story began because one man believed we belonged together.</p>
+<p>It grew through late-night conversations, years of long distance, sacrifice, unwavering faith, marriage, a home built with love, the miracle of our daughter, and countless moments that have shaped who we are today.</p>
+<p>Seventeen years later, our story is still unfolding.</p>
+<h4>My Promise</h4>
+<p>Thomas, you are my safe place, my greatest blessing, my best friend, and the love of my life.</p>
+<p>Through every distance, every challenge, every goodbye, every reunion, every joy, and every season, I would choose you again.</p>
+<p>And I will keep choosing you—for all the days God gives us.</p>
+<p>Today, with a grateful heart, I renew my vows to you.</p>
+<p>I promise to continue loving you, standing beside you, encouraging you, praying for you, laughing with you, and building our future together.</p>
+<p>Because no matter where life leads us...</p>
+<p><em>My heart will always find its way home to you.</em></p>
+</div>
+<p class="story-scroll__hint reveal">Scroll to read our full story &darr;</p>
+</div>
+</section>
+
+<section id="about" class="section">
+<div class="section__inner about">
+    <div class="about__media reveal reveal--left">
+    <div class="frame"><img src="assets/couple.jpg" alt="Thomas and Hazel"></div>
+    <span class="frame-mark" aria-hidden="true"><img src="assets/cpicon.png" alt=""></span>
+    </div>
+    <div class="about__copy reveal reveal--right">
+    <p class="kicker">The Couple</p>
+    <h2 class="heading">Seventeen Years,<br>Still Choosing Each Other</h2>
+    <p class="lead">Thomas and Hazel invite you to celebrate seventeen years of marriage with their daughter by their side, as they renew their vows before family and friends.</p>
+    <div class="stat-row">
+        <div class="stat"><span class="stat__num">17</span><span class="stat__label">Years of Marriage</span></div>
+        <div class="stat"><span class="stat__num">28</span><span class="stat__label">December, Our Day</span></div>
+    </div>
+    </div>
+</div>
+</section>
+
+<section id="celebrations" class="section">
+<div class="section__inner">
+    <p class="kicker reveal center">With Love &amp; Honor</p>
+    <h2 class="reveal heading center">The Entourage</h2>
+    <div class="divider reveal"><span></span><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#icon"/></svg><span></span></div>
+    <p class="reveal lead center">The beloved people who stand with us as we renew our vows.</p>
+    <div class="tabs reveal" role="tablist">
+    <button class="tab is-active" role="tab" data-target="parents">Parents</button>
+    <button class="tab" role="tab" data-target="ceremony">Ceremony</button>
+    <button class="tab" role="tab" data-target="principal">Bridal Entourage</button>
+    <button class="tab" role="tab" data-target="sponsors">Sponsors</button>
+    <button class="tab" role="tab" data-target="littleones">Little Ones</button>
+    <span class="tab-indicator" aria-hidden="true"></span>
+    </div>
+    <div class="tab-panels reveal">
+        <ol class="tab-panel is-active" id="parents" role="tabpanel">
+        <li class="has-role"><span class="role-tag">Bride&rsquo;s Parents</span>Nydia Guanco Equito<br>Arturo Equito Jr.</li>
+        <li class="has-role"><span class="role-tag">Groom&rsquo;s Parents</span>Jessica E. Harris<br>Brian Thomas Prentice<br><small>The mother enters with the Groom</small></li>
+        </ol>
+
+    <ol class="tab-panel" id="ceremony" role="tabpanel">
+        <li class="has-role"><span class="role-tag">Officiant</span>The priest leading the ceremony</li>
+        <li class="has-role"><span class="role-tag">Commentator</span>Jerezette Gonzalez</li>
+        <li class="has-role"><span class="role-tag">First Reader</span>Sophia Rose Elbanbuena</li>
+        <li class="has-role"><span class="role-tag">Responsorial Psalm</span>Claribelle Ploteña</li>
+        <li class="has-role"><span class="role-tag">Second Reader</span>Stephanie Ann Guanco</li>
+        <li class="has-role"><span class="role-tag">Prayer for the Faithful</span>Venus Veloso</li>
+        <li class="has-role"><span class="role-tag">Offertory &mdash; Candles</span>Melvin Encarnacion<br>Stephany Encarnacion</li>
+        <li class="has-role"><span class="role-tag">Offertory &mdash; Flowers</span>Sophia Rose Elbanbuena<br>Doreen Gabrielle Elbanbuena</li>
+        <li class="has-role"><span class="role-tag">Offertory &mdash; Gifts</span>Annacris Equito Ramirez<br>Rowena Labingpuno<br>Alwyn Equito<br>Ma. Lois Gabrielle R. Equito<br>Christy Ann Labingpuno<br>Ninfa Elbanbuena<br>Romar Veloso (Wine)<br>Venus Veloso (Host)</li>
+        </ol>
+
+    <ol class="tab-panel" id="principal" role="tabpanel">
+        <li class="has-role"><span class="role-tag">Best Man</span>Robert Lawrence Duffy</li>
+        <li class="has-role"><span class="role-tag">Groom&rsquo;s Man</span>Michael E. Medalla</li>
+        <li class="has-role"><span class="role-tag">Maid of Honour</span>Ma. Claribelle Ploteña</li>
+        <li class="has-role"><span class="role-tag">Bridesmaid</span>Simone Kathleen Prentice</li>
+        </ol>
+
+    <ol class="tab-panel" id="sponsors" role="tabpanel">
+        <li class="has-role"><span class="role-tag">Principal Sponsors</span>Joelizar Equito<br>Helen Equito</li>
+        <li class="has-role"><span class="role-tag">Secondary Sponsors &mdash; Candle</span>Joenel Elbanbuena<br>Susan Elbanbuena</li>
+        <li class="has-role"><span class="role-tag">Secondary Sponsors &mdash; Cord</span>Nesto Elbanbuena Jr.<br>Roselyn Calipayan</li>
+        <li class="has-role"><span class="role-tag">Secondary Sponsors &mdash; Veil</span>Mr. Marbert Veloso<br>Mrs. Analiza Veloso</li>
+        </ol>
+
+    <ol class="tab-panel" id="littleones" role="tabpanel">
+        <li class="has-role"><span class="role-tag">Junior Bride</span>Isabella Angelique Prentice</li>
+        <li class="has-role"><span class="role-tag">Flower Girl</span>Kate Scarlett M. Encarnacion</li>
+        <li class="has-role"><span class="role-tag">Coin Bearer</span>Annica Brittany Elbanbuena</li>
+        <li class="has-role"><span class="role-tag">Bible Bearer</span>Ma. Alexa Louise M. Encarnacion</li>
+        </ol>
+
+    </div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+<div class="section__inner">
+    <p class="kicker reveal center">Captured in Love</p>
+    <h2 class="reveal heading center">Gallery</h2>
+    <div class="divider reveal"><span></span><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#icon"/></svg><span></span></div>
+
+    <div class="gallery">
+    <figure class="gallery__item reveal reveal--up" data-src="assets/img1.jpg">
+        <img src="assets/img1.jpg"> 
+        <figcaption></figcaption>
+    </figure>
+    <!-- <figure class="gallery__item reveal reveal--up" data-src="assets/img2.jpg">
+        <img src="assets/img2.jpg">
+        <figcaption></figcaption> -->
+    </figure>
+    <figure class="gallery__item reveal reveal--up" data-src="assets/img3.jpg">
+        <img src="assets/img3.jpg">
+        <figcaption></figcaption>
+    </figure>
+    <figure class="gallery__item reveal reveal--up" data-src="assets/img4.jpg">
+        <img src="assets/img4.jpg">
+        <figcaption></figcaption>
+    </figure>
+        
+    <figure class="gallery__item reveal reveal--up" data-src="assets/imh5.jpg">
+        <img src="assets/img5.jpg">
+        <figcaption></figcaption>
+    </figure>
+
+        
+    <figure class="gallery__item reveal reveal--up" data-src="assets/img6.jpg">
+        <img src="assets/img6.jpg">
+        <figcaption></figcaption>
+    <!-- </figure>
+    <figure class="gallery__item reveal reveal--up" data-src="assets/img7.jpg">
+        <img src="assets/img7.jpg">
+        <figcaption></figcaption>
+    </figure>
+    <figure class="gallery__item reveal reveal--up" data-src="assets/img8.jpg">
+        <img src="assets/img8.jpg">
+        <figcaption></figcaption>
+    </figure>
+    <figure class="gallery__item reveal reveal--up" data-src="assets/img9.jpg">
+        <img src="assets/img9.jpg">
+        <figcaption></figcaption>
+    </figure>
+    <figure class="gallery__item reveal reveal--up" data-src="assets/img10.jpg">
+        <img src="assets/img10.jpg">
+        <figcaption></figcaption> -->
+    </figure>
+     
+    
+        
+    <figure class="gallery__item gallery__item--wide reveal reveal--up" data-src="assets/imgw1.jpg">
+        <img src="assets/imgw1.jpg">
+        <figcaption></figcaption>
+    </figure>
+    <figure class="gallery__item gallery__item--wide reveal reveal--up" data-src="assets/imgw2.jpg">
+        <img src="assets/imgw2.jpg">
+        <figcaption></figcaption>
+    </figure>
+    <figure class="gallery__item gallery__item--wide reveal reveal--up" data-src="assets/imgw3.jpg">
+        <img src="assets/imgw3.jpg">
+        <figcaption></figcaption>
+    </figure>
+    <figure class="gallery__item gallery__item--wide reveal reveal--up" data-src="assets/imgw4.jpg">
+        <img src="assets/imgw4.jpg">
+        <figcaption></figcaption>
+    </figure>
+
+    <figure class="gallery__item gallery__item--wide reveal reveal--up" data-src="assets/imgw5.jpg">
+        <img src="assets/imgw5.jpg">
+        <figcaption></figcaption>
+    </figure>
+    <figure class="gallery__item gallery__item--wide reveal reveal--up" data-src="assets/imgw6.jpg">
+        <img src="assets/imgw6.jpg">
+        <figcaption></figcaption>
+    </figure>
+    <figure class="gallery__item gallery__item--wide reveal reveal--up" data-src="assets/imgw8.jpg">
+        <img src="assets/imgw8.jpg">
+        <figcaption></figcaption>
+    </figure>
+    <figure class="gallery__item gallery__item--wide reveal reveal--up" data-src="assets/imgw9.jpg">
+        <img src="assets/imgw9.jpg">
+        <figcaption></figcaption>
+    </figure>
+    <figure class="gallery__item gallery__item--wide reveal reveal--up" data-src="assets/imgw10.jpg">
+        <img src="assets/imgw10.jpg">
+        <figcaption></figcaption>
+    </figure>
+    <figure class="gallery__item gallery__item--wide reveal reveal--up" data-src="assets/imgw11.jpg">
+        <img src="assets/imgw11.jpg">
+        <figcaption></figcaption>
+    </figure>
+    <!-- <figure class="gallery__item gallery__item--wide reveal reveal--up" data-src="assets/imgw12.jpg">
+        <img src="assets/imgw12.jpg">
+        <figcaption></figcaption>
+    </figure> -->
+
+    </div>
+</div>
+</section>
+
+<section id="venue" class="section">
+<div class="section__inner center">
+    <p class="kicker reveal">Where We Say &ldquo;We Still Do&rdquo;</p>
+    <h2 class="reveal heading">The Venues</h2>
+    <div class="divider reveal"><span></span><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#icon"/></svg><span></span></div>
+    <div class="venue-grid">
+    <div class="venue-card reveal reveal--left">
+    <svg class="venue-card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s-7-6.2-7-12a7 7 0 1 1 14 0c0 5.8-7 12-7 12Z" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.4"/></svg>
+    <span class="venue-card__tag">Ceremony &bull; We Do</span>
+    <h3>Padre Pio Chapel</h3>
+    <p>(Beside Lupit Church) Bacolod City, Negros Occidental</p>
+    <p class="venue-card__time">Monday, December 28, 2026 &bull; 2:00 PM</p>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Padre+Pio+Chapel+Lupit+Church+Bacolod" target="_blank" rel="noopener" class="btn">Open in Maps</a>
+    </div>
+    <div class="venue-card reveal reveal--right">
+    <svg class="venue-card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s-7-6.2-7-12a7 7 0 1 1 14 0c0 5.8-7 12-7 12Z" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.4"/></svg>
+    <span class="venue-card__tag">Reception</span>
+    <h3>Seda Hotel</h3>
+    <p>Bacolod City, Negros Occidental</p>
+    <p class="venue-card__time">Monday, December 28, 2026 &bull; 4:00 PM Onwards</p>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Seda+Hotel+Bacolod" target="_blank" rel="noopener" class="btn">Open in Maps</a>
+    </div>
+    </div>
+</div>
+</section>
+
+<section id="timeline" class="section">
+<div class="section__inner section__inner--narrow">
+    <p class="kicker reveal center">How the Day Unfolds</p>
+    <h2 class="reveal heading center">Timeline</h2>
+    <div class="divider reveal"><span></span><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#icon"/></svg><span></span></div>
+    <ol class="timeline">
+    <li class="timeline__item reveal reveal--left"><span class="timeline__time">2:00 PM</span><div class="timeline__dot"></div><div class="timeline__content"><h3>We Do</h3><p>Ceremony</p></div></li>
+    <li class="timeline__item reveal reveal--right"><span class="timeline__time">4:00 PM</span><div class="timeline__dot"></div><div class="timeline__content"><h3>We Shoot</h3><p>Pictorial</p></div></li>
+    <li class="timeline__item reveal reveal--left"><span class="timeline__time">5:00 PM</span><div class="timeline__dot"></div><div class="timeline__content"><h3>We Drink</h3><p>Cocktail Hour</p></div></li>
+    <li class="timeline__item reveal reveal--right"><span class="timeline__time">6:00 PM</span><div class="timeline__dot"></div><div class="timeline__content"><h3>We Eat</h3><p>Reception</p></div></li>
+    <li class="timeline__item reveal reveal--left"><span class="timeline__time">8:00 PM</span><div class="timeline__dot"></div><div class="timeline__content"><h3>We Party</h3><p>Reception</p></div></li>
+    </ol>
+</div>
+</section>
+
+<!-- DRESS CODE -->
+<section id="dresscode" class="section">
+<div class="section__inner">
+    <p class="kicker reveal center">Dressed for the Occasion</p>
+    <h2 class="reveal heading center">Dress Code</h2>
+    <div class="divider reveal"><span></span><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#icon"/></svg><span></span></div>
+
+    <div class="dress-grid">
+
+    <!-- MEN - LEFT -->
+    <figure class="dress-card reveal reveal--left" data-src="assets/men-suit.jpg">
+        <img src="assets/men-suit.jpg" alt="Black formal suit for men" loading="lazy">
+        <figcaption>
+            <span class="dress-card__role">Gentlemen</span>
+            Black Formal Suit
+        </figcaption>
+    </figure>
+
+    <!-- WOMEN - RIGHT -->
+    <figure class="dress-card reveal reveal--right" data-src="assets/women-dress.jpg">
+        <img src="assets/women-dress.jpg" alt="Burgundy formal gown for women" loading="lazy">
+        <figcaption>
+            <span class="dress-card__role">Ladies</span>
+            Elegant Burgundy Formal Gown
+        </figcaption>
+    </figure>
+
+</div>
+
+    <!-- <div class="swatch-row reveal">
+    <div class="swatch-item">
+        <span class="swatch swatch--purple"></span>
+        <p>Ladies &mdash; Crimson Red / Burgundy</p>
+    </div>
+    <div class="swatch-item">
+        <span class="swatch swatch--black"></span>
+        <p>Gentlemen &mdash; Classic Black</p>
+    </div>
+    </div> -->
+
+    <div class="dress-note reveal">
+    <div class="dress-note__col">
+        <span class="dress-card__role">Principal Sponsors</span>
+        <p><strong>Ladies:</strong> Burgundy Formal Gown</p>
+        <p><strong>Gentlemen:</strong> Black Suit, White Long Sleeve &amp; Black Necktie</p>
+    </div>
+    <div class="dress-note__col">
+        <span class="dress-card__role">Guests</span>
+        <p><strong>Guest:</strong> KINDLY REQUEST STRICTLY FORMAL ATTIRE AND ENCOURAGED TO FOLLOW THE DESIGNATED COLOR PALETTE</p>
+        <!-- <p><strong>Girls:</strong> Any red, as long as it's not too light</p>
+        <p><strong>Boys:</strong> Black Long Sleeve &amp; Black Pants</p> -->
+    </div>
+    </div>
+
+    <div class="palette-block reveal">
+    <span class="dress-card__role palette-title">Designated Color Palette</span>
+    <div class="swatch-row">
+        <div class="swatch-item">
+            <span class="swatch swatch--wine"></span>
+            <p>Wine</p>
+        </div>
+        <div class="swatch-item">
+            <span class="swatch swatch--crimson"></span>
+            <p>Crimson</p>
+        </div>
+        <div class="swatch-item">
+            <span class="swatch swatch--rose"></span>
+            <p>Rose</p>
+        </div>
+        <div class="swatch-item">
+            <span class="swatch swatch--coral"></span>
+            <p>Coral Pink</p>
+        </div>
+        <div class="swatch-item">
+            <span class="swatch swatch--blush"></span>
+            <p>Blush</p>
+        </div>
+    </div>
+    </div>
+</div>
+</section>
+
+<!-- GIFT GUIDE -->
+<section id="giftguide" class="section">
+<div class="section__inner">
+    <p class="kicker reveal center">Should You Wish to Give</p>
+    <h2 class="reveal heading center">Gift Guide</h2>
+    <div class="divider reveal"><span></span><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#icon"/></svg><span></span></div>
+    <p class="reveal lead center">Your presence is the greatest gift.</p>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section">
+<div class="section__inner section__inner--narrow">
+    <p class="kicker reveal center">A Few Things to Know</p>
+    <h2 class="reveal heading center">Frequently Asked Questions</h2>
+    <div class="divider reveal"><span></span><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#icon"/></svg><span></span></div>
+
+    <div class="faq-list">
+    <div class="faq-item reveal">
+        <button class="faq-item__q" aria-expanded="false">
+        <span>May I bring a date or plus-one?</span>
+        <span class="faq-item__icon"></span>
+        </button>
+        <div class="faq-item__a">
+        <p>We truly appreciate your understanding, but due to limited seating, we are unable to accommodate additional guests who are not on our official guest list. We kindly ask that you honor our wish to keep the celebration small and intimate.</p>
+        </div>
+    </div>
+
+    <div class="faq-item reveal">
+        <button class="faq-item__q" aria-expanded="false">
+        <span>Can I bring a kid?</span>
+        <span class="faq-item__icon"></span>
+        </button>
+        <div class="faq-item__a">
+        <p>While we truly love and value children, this will be an adult-only event. Only a few children from our immediate families, including those in the entourage, have been invited. We sincerely appreciate your understanding.</p>
+        </div>
+    </div>
+
+    <div class="faq-item reveal">
+        <button class="faq-item__q" aria-expanded="false">
+        <span>Can we take photos or videos during the ceremony?</span>
+        <span class="faq-item__icon"></span>
+        </button>
+        <div class="faq-item__a">
+        <p>To help you fully enjoy and be present in the moment, we have invited professional photographers to capture the most meaningful parts of our day. These photos will be shared with you after the celebration.</p>
+        </div>
+    </div>
+
+    <div class="faq-item reveal">
+        <button class="faq-item__q" aria-expanded="false">
+        <span>Do we really need to RSVP?</span>
+        <span class="faq-item__icon"></span>
+        </button>
+        <div class="faq-item__a">
+        <p>Yes, please. Knowing you're coming helps us prepare a space made just for you &mdash; every chair, every plate, every moment is planned with love. Kindly respond through the RSVP section of this e-invitation.</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="help-card reveal reveal--scale">
+    <p class="help-card__title">How can we help the couple have the best time during their wedding?</p>
+    <ul class="help-list">
+        <li>Pray with us for favors and provisions</li>
+        <li>Stay until the end of the program</li>
+        <li>Participate, enjoy, and have fun</li>
+        <li>Confirm your attendance now</li>
+        <li>Wear appropriate attire</li>
+        <li>Be there on time</li>
+    </ul>
+    </div>
+</div>
+</section>
+
+<section id="rsvp" class="section">
+<div class="section__inner section__inner--narrow center">
+    <p class="kicker reveal">Will You Join Us?</p>
+    <h2 class="reveal heading">RSVP</h2>
+    <div class="divider reveal"><span></span><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#icon"/></svg><span></span></div>
+    <p class="reveal lead">Kindly let us know if you&rsquo;ll be celebrating with Thomas &amp; Hazel on December 28.</p>
+    <form id="rsvpForm" class="rsvp-form reveal reveal--scale">
+    <div class="field"><input type="text" id="rsvpName" placeholder=" " required><label for="rsvpName">Full Name</label></div>
+    <div class="field">
+        <select id="rsvpStatus" required>
+        <option value="" disabled selected hidden></option>
+        <option value="attend">Joyfully Accepts</option>
+        <option value="decline">Regretfully Declines</option>
+        </select>
+        <label for="rsvpStatus" class="label-static">Attendance</label>
+    </div>
+    <div class="field"><input type="number" id="rsvpGuests" min="1" max="10" placeholder=" "><label for="rsvpGuests">Number of Guests</label></div>
+    <div class="field"><textarea id="rsvpMessage" rows="3" placeholder=" "></textarea><label for="rsvpMessage">Message for Thomas &amp; Hazel (optional)</label></div>
+    <button type="submit" class="btn btn--block"><span>Send RSVP</span></button>
+    <p class="rsvp-success" id="rsvpSuccess">Thank you! Your RSVP has been received. &#10003;</p>
+    </form>
+</div>
+</section>
+
+<section id="contact" class="section">
+<div class="section__inner section__inner--narrow center">
+    <p class="kicker reveal">Questions?</p>
+    <h2 class="reveal heading">Contact</h2>
+    <div class="divider reveal"><span></span><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#icon"/></svg><span></span></div>
+    <div class="contact-list reveal">
+    <p><span>Hazel:</span> <a href="tel:+61415144552">0415 144 552</a></p>
+    <p><span>Thomas:</span> <a href="tel:+61449007473">0449 007 473</a></p>
+    <p><span>Email:</span> <a href="mailto:hgprentice29@gmail.com">hgprentice29@gmail.com</a></p>
+    </div>
+</div>
+</section>
+
+<footer class="footer">
+<svg class="footer__crest" viewBox="0 0 200 200" aria-hidden="true"><use href="#icon"/></svg>
+<h3 class="footer__name">Thomas &amp; Hazel</h3>
+<p class="footer__tagline">We Still Do &bull; December 28, 2026</p>
+<p class="footer__note">With heartfelt love and gratitude for sharing in seventeen years of marriage.</p>
+
+<div class="footer__credit">
+    <p>Website created by <strong>MGM Events Management Services</strong></p>
+    <p class="footer__inquire">For inquiries, please contact: <a href="https://www.facebook.com/profile.php?id=100066342828834" target="_blank" rel="noopener">facebook.com/MGMEventsManagementServices</a></p>
+</div>
+</footer>
+
+</main>
+
+<div id="lightbox" class="lightbox"><button class="lightbox__close" aria-label="Close image">&times;</button><img id="lightboxImg" src="" alt=""></div>
+
+<script src="script.js"></script>
+</body>
+</html>
